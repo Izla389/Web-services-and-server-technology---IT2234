@@ -1,13 +1,10 @@
-1. question1
-   ![Q1](https://github.com/user-attachments/assets/786030c3-b9fe-4539-80f4-cd5cfb184546)
+1. callback function to call a function
+   ![asyncrro](https://github.com/user-attachments/assets/843a9f68-55d5-4dd1-a98d-6ad38488c325)
 
-2. question 2
-   ![Q2](https://github.com/user-attachments/assets/9fd23fa5-7634-4813-baf4-7815b5eea248)
+2. Async await 
+    ![await1](https://github.com/user-attachments/assets/d149d47c-5ef1-455b-ba5c-053bfae59087)
+   
+3. ![await2](https://github.com/user-attachments/assets/82671bdf-6d4d-4799-a81f-d86f51c1aade)
 
-3. question 3
-   ![Q3](https://github.com/user-attachments/assets/2a49148f-8e70-4285-82a2-98beb71ffc59)
-
-5. question 4
-   ![Q4](https://github.com/user-attachments/assets/5fc63007-4a78-441f-a7cc-c2ade2541e96)
-
+4. ![promiseapp](https://github.com/user-attachments/assets/4ea4920c-97e2-40d4-b5b3-f1555f928fd5)
 

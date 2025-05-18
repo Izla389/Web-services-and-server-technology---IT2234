@@ -1,4 +1,4 @@
-i. create file index.js 
+1. create file index.js 
 
 2. create folder as models and inside that create file Course.js
    

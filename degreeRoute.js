@@ -1,11 +1,11 @@
 const express = require('express')
 const router = express.Router()
-const Course = require('../models/course')
+const Degree = require('../models/degree')
 const { default: mongoose } = require('mongoose')
 
 router.get('/',async(req,res)=>{
     try{
-        const results = await Course.find()
+        const results = await Degree.find()
         if(results) {
             res.status(200).json(results)
         }else{
@@ -20,7 +20,7 @@ router.get('/',async(req,res)=>{
 router.get('/:id',async(req,res)=>{
     try{
         const id = req.params.id
-        const results = await Course.findById(id)
+        const results = await Degree.findById(id)
         if(results) {
             res.status(200).json(results)
         }else{
@@ -35,7 +35,7 @@ router.get('/:id',async(req,res)=>{
 router.get('/code/:cid',async(req,res)=>{
     try{
         const cid = req.params.cid
-        const results = await Course.find({code:cid})
+        const results = await Degree.find({code:cid})
         const count = results.length
         console.log(count)
         if(results) {
@@ -57,11 +57,11 @@ router.get('/code/:cid',async(req,res)=>{
 
 router.post('/',async(req,res)=>{
     try{
-        const {code,name,credits,description} = req.body
-        if(!code || !name || !credits) {
+        const {_id,name,department,numberofyears} = req.body
+        if(!_id || !name || !department || !numberofyears) {
             res.status(400).send("Please provide data to the required fileds!")
         }else{
-            const results = await Course.create({code,name,credits,description})
+            const results = await Degree.create({_id,name,department,numberofyears})
             res.status(200).json(results)
         }
     }catch(error){
@@ -78,12 +78,12 @@ router.put('/:id',async(req,res)=>{
         if(!mongoose.Types.ObjectId.isValid(id)){
             return res.status(400).send("Invalid ID!")
         }
-        const ucourse = await Course.findById(id)
-        const {code,name,credits,description} = req.body
-        if(!code || !name || !credits) {
+        const udegree = await Degree.findById(id)
+        const {_id,name,department,numberofyears} = req.body
+        if(!_id || !name || !department || !numberofyears) {
             res.status(400).send("Please provide data to the required fileds!")
         }else{
-            const results = await ucourse.updateOne({code,name,credits,description})
+            const results = await udegree.updateOne({_id,name,department,numberofyears})
             res.status(200).json(results)
         }
     }catch(error){
@@ -100,8 +100,8 @@ router.delete('/:id',async(req,res)=>{
         if(!mongoose.Types.ObjectId.isValid(id)){
             return res.status(400).send("Invalid ID!")
         }
-        const dcourse = await Course.findById(id)
-        const results = await dcourse.deleteOne(dcourse).catch((error)=>{
+        const ddegree = await Degree.findById(id)
+        const results = await ddegree.deleteOne(ddegree).catch((error)=>{
             return res.status(500).json(error)}
         )
         res.status(200).json(results)

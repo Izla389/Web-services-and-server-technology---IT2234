@@ -1,19 +1,17 @@
-1. create file index.js 
+1. insert
+   ![insert](https://github.com/user-attachments/assets/a15b2409-6d36-48f8-9c22-399f32f47b07)
 
-2. create folder as models and inside that create file Course.js
-   
-3.. create folder route and inside that create file courseRoute.js
+   ![inset 2](https://github.com/user-attachments/assets/afe1d6dc-c261-44a1-92ac-10a054899d9b)
 
-4.. run as npm start and
-   ![databse connect](https://github.com/user-attachments/assets/645c15c1-642f-4761-86af-35ee69e1ef9e)
+   ![insert 3](https://github.com/user-attachments/assets/64c32ef9-0a19-4052-8c6f-81a6eb38c138)
 
-5. In mongodb database created.
-   ![mongodb_databse created](https://github.com/user-attachments/assets/3623515a-6d04-4f7e-aadc-2789a35c6302)
+3. update
+   ![update 1](https://github.com/user-attachments/assets/01bfa522-53f7-4671-a913-9fd99e5417d1)
 
-6.. Run the port number in postman
-   ![postman_output](https://github.com/user-attachments/assets/fc5f2649-6f67-414a-a994-5e12b2a7592b)
+   ![update 2](https://github.com/user-attachments/assets/b9f241aa-f7ce-4dc5-a580-1a82cb1efa7a)
 
+5. delete
+![delete 1](https://github.com/user-attachments/assets/8c621ca9-560b-4e63-9e29-d4053748a770)
 
-   
-
+![delete 2](https://github.com/user-attachments/assets/c6123adc-b991-4727-9ad1-fae43597da31)
 

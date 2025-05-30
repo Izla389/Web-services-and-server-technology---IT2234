@@ -1,19 +1,23 @@
-1. department
-  ![department](https://github.com/user-attachments/assets/4c093230-a42c-43e4-9505-78406b723c93)
+1. Get a department by ID along with its employees
 
+   ![1](https://github.com/user-attachments/assets/757bffec-1fd0-4332-a0d8-1c69039a36d1)
    
-2. employee
-   ![employee](https://github.com/user-attachments/assets/970b78e0-9831-46ef-a951-25cd0145def9)
 
-   
-3. etf
-   ![etf](https://github.com/user-attachments/assets/b5de4bf0-3b96-45f0-bd8c-9ab63a2241d9)
+2.  select a field which want to display
 
-   
-4. project
-   ![project](https://github.com/user-attachments/assets/2156593d-0d6d-4155-86f9-d1d2376f0b43)
+   ![2](https://github.com/user-attachments/assets/19e4ff8a-fd0f-45e1-aed0-a4cde53ce31a)
 
 
-   
-5. Employee with deparetment
-   ![employee_With_Department](https://github.com/user-attachments/assets/90dad5a8-6bc9-46c5-a60b-75cfe852f242)
+3.  Find employees in the department and populate department details
+
+   ![3](https://github.com/user-attachments/assets/33a0c7f9-d53d-4084-b89f-58c631bf93ca)
+
+
+4.  Get employee count
+
+   ![4](https://github.com/user-attachments/assets/492e6c36-e93c-4988-8a48-b2da18b123a5)
+
+
+
+
+

@@ -1,11 +1,11 @@
 const express=require('express')
 const router=express.Router()
-const Project=require('../models/project')
+const Etf=require('../models/Etf')
 const mongoose=require('mongoose')
 
 router.get('/',async(req,res)=>{
     try{
-        const results=await Project.find() 
+        const results=await Etf.find() 
         if(results){
             res.status(200).json(results)
         }else{
@@ -18,13 +18,14 @@ router.get('/',async(req,res)=>{
     }
 })
 
-
-router.post('/projects', async (req, res) => {
+router.post('/Etf', async (req, res) => {
   try {
-    const result = await Project.insertMany(req.body);
-    res.status(201).json({ message: 'Projects inserted', result });
+    const result = await Etf.insertMany(req.body);
+    res.status(201).json({ message: 'Etf inserted', result });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
+
+
 module.exports=router

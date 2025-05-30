@@ -1,13 +1,14 @@
 const express=require('express'); 
 const app=express();
-const port=3002;
+const port=3009;
 const mongoose = require('mongoose')
 app.use(express.json()) 
 
-const departmentRoute=require('./routes/departmentroute') 
-const employeeRoute=require('./routes/employeeroute')
-const projectRoute=require('./routes/projectroute')
-const etfRoute=require('./routes/etfroute')
+
+const departmentRoute=require('./routes/departmentRoute') 
+const employeeRoute=require('./routes/employeeRoute')
+const projectRoute=require('./routes/projectRoute')
+const etfRoute=require('./routes/etfRoute')
 
 app.use('/department',departmentRoute)  
 app.use('/employee',employeeRoute)
@@ -24,3 +25,4 @@ mongoose.connect('mongodb://localhost:27017/CompanyDB').then(()=>
 app.listen(port,()=>{
     console.log(`server is running on ${port}`);
 })
+

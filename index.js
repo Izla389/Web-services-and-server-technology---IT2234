@@ -1,26 +1,36 @@
-const express=require('express'); 
-const app=express();
-const port=3002;
-const mongoose = require('mongoose')
-app.use(express.json()) 
+const express = require('express');
+const mongoose = require('mongoose');
+const app = express();
+const port = 3000;
 
-const departmentRoute=require('./routes/departmentroute') 
-const employeeRoute=require('./routes/employeeroute')
-const projectRoute=require('./routes/projectroute')
-const etfRoute=require('./routes/etfroute')
+// Middleware to parse JSON
+app.use(express.json());
 
-app.use('/department',departmentRoute)  
-app.use('/employee',employeeRoute)
-app.use('/etf',etfRoute)
-app.use('/project',projectRoute)
+// Routes
+const userRoutes = require('./routes/userRoutes');
+const projectRoutes = require('./routes/projectRoutes');
+const taskRoutes = require('./routes/taskRoutes');
 
-mongoose.connect('mongodb://localhost:27017/CompanyDB').then(()=> 
+// Route registration
+app.use('/user', userRoutes); //for postman call
+app.use('/project', projectRoutes);
+app.use('/task', taskRoutes);
+
+// MongoDB Connection
+mongoose.connect('mongodb://localhost:27017/taskDB').then(()=> 
 {
     console.log("Database connected")
 }).catch((error)=>{
     console.error(error);
 })
 
-app.listen(port,()=>{
-    console.log(`server is running on ${port}`);
-})
+// Error handling middleware (global)
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).json({ error: "Something went wrong!" });
+});
+
+// Start server
+app.listen(port, () => {
+  console.log(`Server running at on :${port}`);
+});

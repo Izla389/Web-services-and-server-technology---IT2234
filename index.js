@@ -1,26 +1,26 @@
-const express=require('express'); 
-const app=express();
-const port=3002;
+const express = require('express');
+const app =express();
+const port=3001;
 const mongoose = require('mongoose')
-app.use(express.json()) 
 
-const departmentRoute=require('./routes/departmentroute') 
-const employeeRoute=require('./routes/employeeroute')
-const projectRoute=require('./routes/projectroute')
-const etfRoute=require('./routes/etfroute')
+const bookrt= require('./routes/bookRoute')
+const studentrt= require('./routes/studentRoute')
+const borrowrt= require('./routes/borrowRoute')
+const userRt= require('./routes/userRoute')
 
-app.use('/department',departmentRoute)  
-app.use('/employee',employeeRoute)
-app.use('/etf',etfRoute)
-app.use('/project',projectRoute)
+app.use(express.json())
+app.use('/book',bookrt)
+app.use('/stu',studentrt)
+app.use('/bor',borrowrt)
+app.use('/user',userRt)
 
-mongoose.connect('mongodb://localhost:27017/CompanyDB').then(()=> 
-{
+
+mongoose.connect('mongodb://localhost:27017/libappDB').then(()=>{
     console.log("Database connected")
 }).catch((error)=>{
-    console.error(error);
+    console.error(error);   
 })
 
 app.listen(port,()=>{
-    console.log(`server is running on ${port}`);
+    console.log(`Server is running on ${port}`);
 })
